@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SeeFood/static/css/main.5b21d008.chunk.css",
-    "main.js": "/SeeFood/static/js/main.154b427f.chunk.js",
-    "main.js.map": "/SeeFood/static/js/main.154b427f.chunk.js.map",
+    "main.js": "/SeeFood/static/js/main.81f867fd.chunk.js",
+    "main.js.map": "/SeeFood/static/js/main.81f867fd.chunk.js.map",
     "runtime-main.js": "/SeeFood/static/js/runtime-main.9b748eac.js",
     "runtime-main.js.map": "/SeeFood/static/js/runtime-main.9b748eac.js.map",
     "static/css/2.31461e4f.chunk.css": "/SeeFood/static/css/2.31461e4f.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.31461e4f.chunk.css",
     "static/js/2.bb990409.chunk.js",
     "static/css/main.5b21d008.chunk.css",
-    "static/js/main.154b427f.chunk.js"
+    "static/js/main.81f867fd.chunk.js"
   ]
 }
