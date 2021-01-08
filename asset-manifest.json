@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/SeeFood/static/css/main.5b21d008.chunk.css",
+    "main.js": "/SeeFood/static/js/main.154b427f.chunk.js",
+    "main.js.map": "/SeeFood/static/js/main.154b427f.chunk.js.map",
+    "runtime-main.js": "/SeeFood/static/js/runtime-main.9b748eac.js",
+    "runtime-main.js.map": "/SeeFood/static/js/runtime-main.9b748eac.js.map",
+    "static/css/2.31461e4f.chunk.css": "/SeeFood/static/css/2.31461e4f.chunk.css",
+    "static/js/2.bb990409.chunk.js": "/SeeFood/static/js/2.bb990409.chunk.js",
+    "static/js/2.bb990409.chunk.js.map": "/SeeFood/static/js/2.bb990409.chunk.js.map",
+    "static/js/3.1c117156.chunk.js": "/SeeFood/static/js/3.1c117156.chunk.js",
+    "static/js/3.1c117156.chunk.js.map": "/SeeFood/static/js/3.1c117156.chunk.js.map",
+    "index.html": "/SeeFood/index.html",
+    "static/css/2.31461e4f.chunk.css.map": "/SeeFood/static/css/2.31461e4f.chunk.css.map",
+    "static/css/main.5b21d008.chunk.css.map": "/SeeFood/static/css/main.5b21d008.chunk.css.map",
+    "static/js/2.bb990409.chunk.js.LICENSE.txt": "/SeeFood/static/js/2.bb990409.chunk.js.LICENSE.txt",
+    "static/media/brain.596fd175.png": "/SeeFood/static/media/brain.596fd175.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b748eac.js",
+    "static/css/2.31461e4f.chunk.css",
+    "static/js/2.bb990409.chunk.js",
+    "static/css/main.5b21d008.chunk.css",
+    "static/js/main.154b427f.chunk.js"
+  ]
+}
