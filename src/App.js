@@ -6,6 +6,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import SeeFood from './components/SeeFood/SeeFood';
 import Signin from "./components/Signin/Signin";
+import Signup from "./components/Signup/Signup";
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 
@@ -19,7 +20,8 @@ class App extends Component {
         this.state = {
             input: '',
             imageUrl: '',
-            route: 'signin'
+            route: 'signin',
+            isSignedIn: false
         }
     }
 
@@ -35,6 +37,11 @@ class App extends Component {
 }
 
     onRouteChange = (route) => {
+        if (route === 'signout'){
+            this.setState({isSignedIn: false})
+        } else if (route === 'home'){
+            this.setState({isSignedIn: true})
+        }
         this.setState({route: route})
     }
 
@@ -66,18 +73,25 @@ class App extends Component {
                 <Particles className='particles'
                 params={{particles:{number:50,density:{enable:true,value_area:800}}}} />
 
-                <Navigation onRouteChange={this.onRouteChange}/>
-                {this.state.route === 'signin'
+                <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
+                {this.state.route === 'home'
                     ? <div>
-                        <Logo />
-                        <Signin onRouteChange={this.onRouteChange}/>
-                    </div>
-                    : <div>
                         <Logo />
                         <Rank />
                         <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
                         <SeeFood imageUrl={this.state.imageUrl}/>
                      </div>
+                    : (
+                        this.state.route === 'signin'
+                            ? <div>
+                                <Logo />
+                                <Signin onRouteChange={this.onRouteChange}/>
+                              </div>
+                            : <div>
+                                <Logo />
+                                <Signup onRouteChange={this.onRouteChange}/>
+                              </div>
+                    )
                 }
             </div>
   );}
