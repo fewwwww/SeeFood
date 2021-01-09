@@ -24,7 +24,7 @@ const Signin = ({onRouteChange}) => {
                                type="submit" value="Sign in" />
                     </div>
                     <div className="lh-copy mt3">
-                        <p onClick={() => onRouteChange('signup')} className="f6 link dim black db pointer">Sign up</p>
+                        <p onClick={() => onRouteChange('signup')} className="f6 link dim black db pointer">Sign p</p>
                     </div>
                 </form>
             </main>
