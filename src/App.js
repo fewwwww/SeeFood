@@ -5,6 +5,7 @@ import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import SeeFood from './components/SeeFood/SeeFood';
+import Signin from "./components/Signin/Signin";
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 
@@ -18,6 +19,7 @@ class App extends Component {
         this.state = {
             input: '',
             imageUrl: '',
+            route: 'signin'
         }
     }
 
@@ -31,6 +33,11 @@ class App extends Component {
                ${FoodList[3].name}  ${FoodList[3].value}\n
                ${FoodList[4].name}  ${FoodList[4].value}`
 }
+
+    onRouteChange = (route) => {
+        this.setState({route: route})
+    }
+
     onInputChange = (event) =>{
         this.setState({input:event.target.value});
     }
@@ -58,11 +65,20 @@ class App extends Component {
             <div className="App">
                 <Particles className='particles'
                 params={{particles:{number:50,density:{enable:true,value_area:800}}}} />
-                <Navigation />
-                <Logo />
-                <Rank />
-                <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
-                <SeeFood imageUrl={this.state.imageUrl}/>
+
+                <Navigation onRouteChange={this.onRouteChange}/>
+                {this.state.route === 'signin'
+                    ? <div>
+                        <Logo />
+                        <Signin onRouteChange={this.onRouteChange}/>
+                    </div>
+                    : <div>
+                        <Logo />
+                        <Rank />
+                        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
+                        <SeeFood imageUrl={this.state.imageUrl}/>
+                     </div>
+                }
             </div>
   );}
 
