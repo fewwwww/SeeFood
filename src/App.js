@@ -83,19 +83,9 @@ class App extends Component {
                   })
               })    .then(res => res.json())
                     .then(count =>{
-                      this.setState(Object.assign(this.state.user, {entries: count}))
-                  })
-              }
-          })
-          this.displayFoodList(response.outputs[0].data.concepts)
-        console.log(
-          response.outputs[0].data.concepts
-        );
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-    }
+                      this.setState(Object.assign(this.state.user, {entries: count}))})}
+          this.displayFoodList(response.outputs[0].data.concepts)})
+                    .catch((err) => {console.log(err);})}
 
     render(){
         return (
