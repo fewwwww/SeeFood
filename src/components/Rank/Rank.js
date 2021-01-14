@@ -4,7 +4,7 @@ const Rank = () => {
     return(
         <div>
             <div className='white f1'>
-                {'SeeFood'}
+                {`${name}, your current entry count is...`}
             </div>
 
         </div>

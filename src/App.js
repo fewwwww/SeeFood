@@ -21,8 +21,25 @@ class App extends Component {
             input: '',
             imageUrl: '',
             route: 'signin',
-            isSignedIn: false
+            isSignedIn: false,
+            user: {
+                id: '',
+                name: '',
+                email: '',
+                entries: 0,
+                joined: ''
+            }
         }
+    }
+
+    loadUser = (data) => {
+        this.setState({data: {
+            id: data.id,
+            name: data.name,
+            email: data.email,
+            entries: data.entries,
+            joined: data.joined
+        }})
     }
 
     displayFoodList = (apiOutput) => {
@@ -56,7 +73,20 @@ class App extends Component {
         Clarifai.FOOD_MODEL,
         this.state.input
       )
-      .then((response) => {
+      .then(response => {
+          if (response){
+              fetch('http://localhost:3000/image', {
+                  method: 'put',
+                  headers: {'Content-Type': 'application/json'},
+                  body: JSON.stringify({
+                      id: this.state.user.id
+                  })
+              })    .then(res => res.json())
+                    .then(count =>{
+                      this.setState(Object.assign(this.state.user, {entries: count}))
+                  })
+              }
+          })
           this.displayFoodList(response.outputs[0].data.concepts)
         console.log(
           response.outputs[0].data.concepts
@@ -89,7 +119,7 @@ class App extends Component {
                               </div>
                             : <div>
                                 <Logo />
-                                <Signup onRouteChange={this.onRouteChange}/>
+                                <Signup loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                               </div>
                     )
                 }
