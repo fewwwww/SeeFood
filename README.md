@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# SeeFood: AI food detection website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built with React, Node.js, PostgreSQL to practice my full-stack programming skills.
+The files includes both the front and back end.
 
 ## Available Scripts
 
