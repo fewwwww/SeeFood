@@ -1,14 +1,12 @@
 # SeeFood: AI food detection website
 
-
-
 SeeFood uses AI API to detect the food in the picture, and gives you a list of food type and its probability.
 
 This project is built with React, Node.js, PostgreSQL to practice my full-stack programming skills.
 
 
 
-The files includes both the front and back end.
+### How to run
 
 In the project directory, you can run: `npm start`to run the front end page.
 
