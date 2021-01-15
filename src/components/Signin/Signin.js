@@ -24,12 +24,13 @@ class Signin extends React.Component {
             })
         })
             .then(res => res.json())
-            .then(data => {
-                if (data=== 'success'){
+            .then(user => {
+                if (user.id){
                     this.props.onRouteChange('home');
                 }
             })
         }
+
     render() {
         const {onRouteChange} = this.props;
         return (
@@ -56,7 +57,7 @@ class Signin extends React.Component {
                         </div>
                         <div className="lh-copy mt3">
                             <p onClick={() => this.props.onRouteChange('signup')} className="f6 link dim black db pointer">Sign
-                                p</p>
+                                up</p>
                         </div>
                     </form>
                 </main>
